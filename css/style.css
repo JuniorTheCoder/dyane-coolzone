@@ -1,0 +1,995 @@
+/* Fonts import */
+body {
+  font-family: "Poppins", sans-serif;
+  margin-top: auto; /* Ensures no default margin */
+  padding: auto; /* Removes any padding */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a5d7e2 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, #a5d7e2 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, #a5d7e2 25%, transparent 25%),
+              linear-gradient(45deg, #a5d7e2 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #d0eaff;
+  animation: shimmer 1.5s infinite;
+}
+
+body .sub_page{
+  min-height: auto;
+  height: auto;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+.layout_padding {
+  padding: 90px 0;
+}
+
+.layout_padding2 {
+  padding: 45px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 45px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 45px;
+}
+
+.layout_padding-top {
+  padding-top: 90px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 90px;
+}
+
+.long_section {
+  margin-left: 45px;
+  margin-right: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.heading_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading_container h2 {
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2980b9;
+}
+
+.hero_area {
+  min-height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub_page .hero_area {
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* Fix for header section */
+.sub_page .header_section {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.header_section {
+    background-color: transparent; /* Make it transparent */
+}
+
+.header_section .container-fluid {
+  padding: 0 25px;
+}
+
+.header_section .nav_container {
+  margin: 0 auto;
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 3px 15px;
+  margin: 10px 15px;
+  color: #34495e;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #2980b9; /* Added hover color */
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.custom_nav-container .nav_search-btn {
+  background-color: #2980b9;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+}
+
+.navbar-brand span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2980b9;
+  text-transform: uppercase;
+}
+
+.custom_nav-container {
+  z-index: 99999;
+  padding: 5px 0;
+}
+
+.custom_nav-container .navbar-toggler {
+  outline: none;
+  padding: 0;
+  width: 37px;
+  height: 42px;
+  transition: all 0.3s;
+}
+
+.custom_nav-container .navbar-toggler span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: #000000;
+  border-radius: 15px;
+  margin: 7px 0;
+  transition: all 0.3s;
+}
+
+.custom_nav-container .navbar-toggler span::before, 
+.custom_nav-container .navbar-toggler span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 15px;
+  top: -10px;
+  transition: all 0.3s;
+}
+
+.custom_nav-container .navbar-toggler span::after {
+  top: 10px;
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] {
+  transform: rotate(360deg);
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span {
+  transform: rotate(45deg);
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, 
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.quote_btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote_btn-container a {
+  color: #2980b9;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+
+.quote_btn-container a span {
+  margin-right: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary color */
+    color: white;              /* Text color */
+    border: none;              /* Remove border */
+    padding: 10px 20px;       /* Padding around text */
+    font-size: 16px;          /* Font size */
+    border-radius: 5px;       /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    display: block;            /* Align block */
+    margin: 0 auto;           /* Center horizontally */
+    text-align: center;        /* Center text */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Slider section */
+.slider_section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: rgba(173, 216, 230, 0.7); /* Light Blue Background */
+  border-radius: 15px; /* Curved Edges */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow Effect */
+
+}
+
+.slider_section .row {
+  align-items: center;
+}
+
+.slider_section #customCarousel {
+  width: 100%;
+  z-index: 3;
+}
+
+.slider_section .detail-box {
+  color: #000000;
+}
+
+.slider_section .detail-box h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.slider_section .detail-box p {
+  margin: 25px 0;
+}
+
+.slider_section .detail-box .btn-box {
+  display: flex;
+  margin: 0 -5px;
+}
+
+.slider_section .detail-box .btn-box a {
+  margin: 5px;
+  text-align: center;
+  width: 165px;
+}
+
+.slider_section .detail-box .btn-box .btn1 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #3498db;
+  transition: all .2s;
+}
+
+.slider_section .detail-box .btn-box .btn1:hover {
+  background-color: transparent;
+  color: #f89646;
+}
+
+.slider_section .detail-box .btn-box .btn2 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #1abc9c;
+  transition: all .2s;
+}
+
+.slider_section .detail-box .btn-box .btn2:hover {
+  background-color: transparent;
+  color: #6bb7be;
+}
+
+.slider_section .img-box img {
+  width: 100%;
+}
+
+.slider_section .carousel-indicators {
+  position: unset;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.slider_section .carousel-indicators li {
+  background-color: #6bb7be;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  opacity: 1;
+}
+
+.slider_section .carousel-indicators li.active {
+  width: 17px;
+  height: 17px;
+  background-color: #f89646;
+}
+
+.slider_section .carousel-item {
+  padding: 20px 0;
+}
+
+.slider_section .carousel-item .img-box {
+  text-align: center;
+}
+
+.slider_section .carousel-item .img-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider_section .carousel-control-prev,
+.slider_section .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: #6bb7be;
+  opacity: 1;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider_section .carousel-control-prev:hover,
+.slider_section .carousel-control-next:hover {
+  background-color: #f89646;
+}
+
+.slider_section .carousel-control-prev {
+  left: 15px;
+}
+
+.slider_section .carousel-control-next {
+  right: 15px;
+}
+
+.appliances_section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+}
+
+.appliances_section .box {
+  margin: 0px;
+  background-color: transparent;
+  padding: 25px;
+  border-radius: auto;
+  width: 400px; /* Set a fixed width for uniformity */
+}
+
+.appliances_section .box .img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Height for larger images */
+  width: 100%; /* Use full width of the box */
+  padding: 25px;
+}
+
+.appliances_section .box .img-box img {
+  width: 100%; /* Ensure the image takes the full width */
+  height: 100%; /* Ensure the image takes the full height */
+  object-fit: cover; /* Maintain aspect ratio and cover the box */
+}
+
+.appliances_section .box .detail-box {
+  margin-top: 15px;
+  text-align: center; /* Center text in detail box */
+}
+
+.appliances_section .box .detail-box h5 {
+  text-transform: uppercase;
+  font-size: 28px; /* Increased font size */
+}
+
+.appliances_section .box .detail-box .price_box {
+  display: flex;
+  justify-content: center; /* Center the price box content */
+  align-items: center; /* Align items vertically */
+  margin-top: 10px; /* Add some space above the price box */
+}
+
+.appliances_section .box .detail-box .price_box .price_heading {
+  margin-bottom: 0;
+  font-size: 20px; /* Increased font size */
+}
+
+.appliances_section .box .detail-box .price_box .price_heading span {
+  color: #2980b9;
+  font-size: 20px; /* Increased font size */
+}
+
+.appliances_section .box .detail-box .price_box a {
+  color: #6bb7be;
+  text-transform: uppercase;
+  font-size: 20px; /* Increased font size */
+  margin-left: 8px;
+}
+
+.about_section {
+  background-color: rgba(173, 216, 230, 0.7); /* Light Blue Background */
+  border-radius: 15px; /* Curved Edges */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow Effect */
+  margin-top: 0;
+}
+
+.about_section .row {
+  align-items: center;
+}
+
+.about_section .img-box img {
+  width: 100%;
+}
+
+.about_section .detail-box p {
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.about_section .detail-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #6bb7be;
+  transition: all .2s;
+}
+
+.about_section .detail-box a:hover {
+  background-color: transparent;
+  color: #6bb7be;
+}
+
+.blog_section .row {
+  display: flex; /* Use flexbox for the row */
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.blog_section .box {
+  display: flex; /* Make the box a flex container */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Distribute space evenly */
+  margin-top: 55px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  height: 90%; /* Ensure the box takes full height of the row */
+}
+
+.blog_section .box .img-box {
+  position: relative;
+  height: 150px; /* Fixed height for images */
+}
+
+.blog_section .box .img-box img {
+  width: 100%;
+  height: 100%; /* Ensure the image fills the box */
+  object-fit: cover; /* Maintain aspect ratio */
+  margin-top: 35px;
+}
+
+.blog_section .box .detail-box {
+  padding: 25px;
+  flex-grow: 1; /* Allow detail box to grow and fill available space */
+  margin-top: 35px;
+}
+
+.blog_section .box .detail-box h5 {
+  font-weight: bold;
+}
+
+.blog_section .box .detail-box p {
+  font-size: 15px;
+  color: #444;
+}
+
+.blog_section .box .detail-box a {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #6bb7be;
+  transition: all .2s;
+}
+
+.blog_section .box .detail-box a:hover {
+  background-color: transparent;
+  color: #6bb7be;
+}
+
+.client_section .heading_container {
+  align-items: center;
+}
+
+.client_section .box {
+  display: flex;
+  align-items: center;
+  margin: 45px;
+  padding: 35px 25px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.client_section .box .img-box {
+  border-radius: 100%;
+  border: 10px solid #6bb7be;
+  margin-right: 25px;
+  min-width: 175px;
+  max-width: 175px;
+  overflow: hidden;
+}
+
+.client_section .box .img-box img {
+  width: 100%;
+}
+
+.client_section .box .detail-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.client_section .box .detail-box .name {
+  text-align: center;
+}
+
+.client_section .box .detail-box .name img {
+  width: 25px;
+  margin-bottom: 5px;
+}
+
+.client_section .box .detail-box .name h6 {
+  color: #2980b9;
+  font-size: 20px;
+}
+
+.client_section .carousel_btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.client_section .carousel-control-prev,
+.client_section .carousel-control-next {
+  position: unset;
+  width: 45px;
+  height: 45px;
+  border: none;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-color: #6bb7be;
+  border-radius: 100%;
+  margin: 0 2.5px;
+}
+
+.client_section .carousel-control-prev:hover,
+.client_section .carousel-control-next:hover {
+  background-color: #000000;
+}
+
+.client_section .carousel-control-next {
+  left: initial;
+}
+
+/* Contact Section Styles */
+.contact_section {
+  padding-top: 20px;
+  margin-top: 0;
+  background-color: transparent;
+}
+
+.form_container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.heading_container {
+  margin-bottom: 30px;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically (if needed) */
+}
+
+.heading_container h2 {
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #333; /* Change color if needed */
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center text within the heading */
+}
+
+.form_container input,
+.form_container select,
+.form_container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+.form_container input:focus,
+.form_container select:focus,
+.form_container textarea:focus {
+  border-color: #6bb7be;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(107, 183, 190, 0.2);
+}
+
+.form_container textarea {
+  height: 120px; /* Set a fixed height for the textarea */
+  resize: none; /* Disable resizing */
+}
+
+.btn_box {
+  text-align: center;
+}
+
+.btn_box button {
+  padding: 12px 30px;
+  background-color: #6bb7be;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn_box button:hover {
+  background-color: #5aa5ac; /* Lighter shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form_container {
+    padding: 20px;
+  }
+}
+
+.info_section {
+  background-color: #34495e; /* Darker shade */
+  border-radius: 15px; /* Curved Edges */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow Effect */
+  color: #ecf0f1; /* Light for contrast */
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.info_section .contact_nav {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.info_section .contact_nav a {
+  flex: 1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.info_section .contact_nav a i {
+  font-size: 28px;
+}
+
+.info_section .contact_nav a:hover {
+  color: #3498db; /* Match logo color */
+}
+
+.info_section .info_top {
+  padding: 45px 0;
+}
+
+.info_section h4 {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.info_links_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info_links_menu a {
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.info_links_menu a:hover {
+  color: #3498db; /* Changed hover color */
+}
+
+.service_links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info_section .info_links .info_links_menu a:hover, 
+.info_section .info_links .info_links_menu a.active {
+  color: #3498db; /* Active link color */
+}
+
+.info_section .info_post .post_box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.info_section .info_post .post_box .img-box {
+  min-width: 65px;
+  max-width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  flex-basis: calc(33% - 10px);
+  padding: 10px;
+  margin: 5px;
+}
+
+.info_section .info_post .post_box .img-box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.info_section .info_post .post_box p {
+  margin: 0;
+}
+
+.info_section .info_post .post_box:not(:nth-last-child(1)) {
+  margin-bottom: 15px;
+}
+
+.info_section .info_form input {
+  width: 100%;
+  border: none;
+  height: 45px;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  background-color: #eaeaea;
+  outline: none;
+  color: #101010;
+}
+
+.info_section .info_form button {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #6bb7be;
+  color: #ffffff;
+  border-radius: 0px;
+  border: 1px solid #6bb7be;
+  transition: all .2s;
+}
+
+.info_section .info_form button:hover {
+  background-color: transparent;
+  color: #6bb7be;
+}
+
+.info_section .info_form .social_box {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+}
+
+.info_section .info_form .social_box a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #6bb7be;
+  color: #6bb7be;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.info_section .info_form .social_box a:hover {
+  color: #f89646; /* Change hover color */
+  border-color: #f89646; /* Change border color on hover */
+}
+
+/* Footer section */
+.footer_section {
+  position: relative;
+  text-align: center;
+}
+
+.footer_section p {
+  color: #000000;
+  padding: 25px 0;
+  margin: 0;
+}
+
+.footer_section p a {
+  color: inherit;
+}
+
+/* Back to Top Button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #3498db; /* Match logo color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #f89646; /* Lighter shade on hover */
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Service description styling */
+.service-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* General image styling for responsiveness */
+img {
+  max-width: 100%; /* Ensure images do not exceed their container's width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments */
+/* Existing CSS code... */
+
+/* Other styles here... */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slider_section .detail-box .btn-box a {
+    width: 140px;
+  }
+  
+  .slider_section .carousel-control-prev,
+  .slider_section .carousel-control-next {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .info_section .contact_nav {
+    flex-direction: column;
+  }
+  
+  .info_section .contact_nav a {
+    margin-bottom: 15px;
+  }
+  
+  .about_section .img-box img {
+    max-width: 100%; /* Full width on mobile */
+  }
+}
+
+.appliances_section .heading_container {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within the container */
+  margin-bottom: 30px; /* Space below the heading */
+}
+.appliances_section .heading_container h3 {
+  position: relative;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 10px; /* Space below the heading */
+}
+.appliances_section .heading_container p {
+  font-size: 1.2rem; /* Increase font size for the paragraph */
+  color: #555; /* Optional: Change text color for better visibility */
+}
+
+.blog_section .heading_container {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within the container */
+  margin-bottom: 30px; /* Space below the heading */
+}
+.blog_section .heading_container h1 {
+  position: relative;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 10px; /* Space below the heading */
+}
+.blog_section .heading_container p {
+  font-size: 1.2rem; /* Increase font size for the paragraph */
+  color: #555; /* Optional: Change text color for better visibility */
+}
